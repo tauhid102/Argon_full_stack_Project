@@ -123,5 +123,34 @@ export const useStyles = makeStyles({
       display: 'none !important',
       background: '#f584',
     }
+  },
+  categorySection:{
+    boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)',
+    borderRadius: '10px',
+    padding: '20px 10px',
+    marginTop: '30px',
+    "& $img": {
+      width: '100%',
+    }
+  },
+  categoryCard:{
+    position: 'relative',
+  },
+  categoryCartOverlay:{
+    background: 'rgba(0, 0, 0, 0.5)',
+    height: '100%',
+    width: '100%',
+    position: 'absolute',
+    top: '0',
+    left: '0',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    textAlign: 'center',
+    "& $h5  ": {
+      color: '#fff',
+      marginBottom: '10px',
+    }
   }
 });

@@ -36,3 +36,21 @@ export const pricing = [
     img: "https://i.ibb.co/bbj4817/Front-of-a-clean-Black-T-Shirt-just-waiting-for-you-to-add-your-own-logo-Graphics-or-words-Clipping.jpg",
   },
 ];
+
+export const categories = [
+  {
+    id: 1,
+    title: "T-Shirt",
+    img: "https://i.ibb.co/bbj4817/Front-of-a-clean-Black-T-Shirt-just-waiting-for-you-to-add-your-own-logo-Graphics-or-words-Clipping.jpg",
+  },
+  {
+    id: 2,
+    title: "Pants",
+    img: "https://i.ibb.co/bbj4817/Front-of-a-clean-Black-T-Shirt-just-waiting-for-you-to-add-your-own-logo-Graphics-or-words-Clipping.jpg",
+  },
+  {
+    id: 3,
+    title: "Shoes",
+    img: "https://i.ibb.co/bbj4817/Front-of-a-clean-Black-T-Shirt-just-waiting-for-you-to-add-your-own-logo-Graphics-or-words-Clipping.jpg",
+  },
+];
