@@ -106,7 +106,7 @@ export default function Header() {
         </IconButton>
         <p>Notifications</p>
       </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
+      <MenuItem className={badgeMenuIcon} onClick={handleProfileMenuOpen}>
         <IconButton
           size="large"
           aria-label="account of current user"
@@ -162,6 +162,7 @@ export default function Header() {
               </Badge>
             </IconButton>
             <IconButton
+            className={badgeMenuIcon}
               size="large"
               edge="end"
               aria-label="account of current user"
@@ -182,7 +183,7 @@ export default function Header() {
               onClick={handleMobileMenuOpen}
               color="inherit"
             >
-              <MenuIcon />
+              <MenuIcon className={badgeMenuIcon}/>
             </IconButton>
           </Box>
         </Toolbar>
