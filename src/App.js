@@ -1,9 +1,9 @@
 import './App.css';
-import Home from './pages/Home/Home';
+import AllProducts from './pages/Products/AllProducts';
 function App() {
   return (
     <>
-      <Home/>
+      <AllProducts/>
     </>
   );
 }

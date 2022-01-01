@@ -3,7 +3,6 @@ import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutl
 import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import SearchIcon from "@mui/icons-material/Search";
 import AppBar from "@mui/material/AppBar";
 import Badge from "@mui/material/Badge";
 import Box from "@mui/material/Box";
@@ -15,15 +14,12 @@ import Typography from "@mui/material/Typography";
 import * as React from "react";
 import AppLogo from "../assets/logo.png";
 import {
-  Search,
-  SearchIconWrapper,
-  StyledInputBase,
   useStyles
 } from "../styles/Styles";
-
 // Start Main Function Work___________
 export default function Header() {
-  const { headerAppBar, appBarLogo,badgeMenuIcon } = useStyles();
+  const { headerAppBar, appBarLogo, badgeMenuIcon } = useStyles();
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -132,15 +128,7 @@ export default function Header() {
           >
             <img className={appBarLogo} src={AppLogo} alt="" />
           </Typography>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="I'm shopping for…"
-              inputProps={{ "aria-label": "search" }}
-            />
-          </Search>
+
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <IconButton
@@ -158,11 +146,11 @@ export default function Header() {
               color="inherit"
             >
               <Badge className={badgeMenuIcon} badgeContent={17} color="error">
-                <NotificationsIcon  />
+                <NotificationsIcon />
               </Badge>
             </IconButton>
             <IconButton
-            className={badgeMenuIcon}
+              className={badgeMenuIcon}
               size="large"
               edge="end"
               aria-label="account of current user"
@@ -183,7 +171,7 @@ export default function Header() {
               onClick={handleMobileMenuOpen}
               color="inherit"
             >
-              <MenuIcon className={badgeMenuIcon}/>
+              <MenuIcon className={badgeMenuIcon} />
             </IconButton>
           </Box>
         </Toolbar>

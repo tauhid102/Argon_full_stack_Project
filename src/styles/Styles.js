@@ -5,16 +5,18 @@ import { makeStyles } from "@mui/styles";
 export const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
+  display: "flex",
+  alignItems: "stretch",
+  width: "100%",
+  justifyContent: "space-between",
   backgroundColor: alpha(theme.palette.common.white, 0.15),
   "&:hover": {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
-  marginRight: theme.spacing(2),
   marginLeft: 0,
-  width: "100%",
   border: "2px solid #555",
   [theme.breakpoints.up("sm")]: {
-    marginLeft: theme.spacing(3),
+    // marginLeft: theme.spacing(3),
     width: "auto",
     color: "#444",
   },
@@ -178,4 +180,34 @@ export const useStyles = makeStyles({
       textAlign: "center !important",
     },
   },
+  cardCardsInfo:{
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '100%',
+    
+  },
+  singleProductCard:{
+    boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)',
+    padding: '1rem',
+    "& $img":{
+      transform : 'scale(1)',
+      transition: 'all 0.4s linear',
+      "&:hover":{
+        transform : 'scale(1.1)',
+      }
+    },
+    "& $h5":{
+      color: '#f5841a !important',
+      fontSize: '1.4rem',
+      fontWeight: 600,
+    },
+    "& $h6":{
+      color: '#f5841a !important',
+    },
+    "& $p":{
+      color: '#f5841a !important',
+      fontWeight: 300
+    },
+  }
 });
