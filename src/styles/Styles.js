@@ -68,6 +68,7 @@ export const useStyles = makeStyles({
       background: "#333",
       transition: "all 0.3s ease-in-out",
       zIndex: "-1",
+      borderRadius: "50%",
     },
     "&:hover": {
       "&::after": {
@@ -75,6 +76,7 @@ export const useStyles = makeStyles({
         left: "0%",
         right: "0%",
         bottom: "0%",
+        borderRadius: "0%",
       },
     },
   },
@@ -110,47 +112,70 @@ export const useStyles = makeStyles({
       },
     },
   },
-  rightSlideMainBox:{
-    height :'500px',
-    overflowY: 'scroll',
-    background: '#f5841a',
-    padding:'0 10px',
-    width: '220px'
+  rightSlideMainBox: {
+    height: "500px",
+    overflowY: "scroll",
+    background: "#f5841a",
+    padding: "0 10px",
+    width: "220px",
   },
-  rightSlideParentBox:{
-    display: 'flex',
+  rightSlideParentBox: {
+    display: "flex",
     "& @media (max-width: 1024px)": {
-      display: 'none !important',
-      background: '#f584',
-    }
+      display: "none !important",
+      background: "#f584",
+    },
   },
-  categorySection:{
-    boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)',
-    borderRadius: '10px',
-    padding: '20px 10px',
-    marginTop: '30px',
+  categorySection: {
+    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)",
+    borderRadius: "10px",
+    padding: "20px 10px",
+    marginTop: "40px",
+    marginBottom: "40px",
     "& $img": {
-      width: '100%',
-    }
+      width: "100%",
+    },
   },
-  categoryCard:{
-    position: 'relative',
+  categoryCard: {
+    position: "relative",
+    borderRadius: "10px !important",
+    overflow: "hidden",
   },
-  categoryCartOverlay:{
-    background: 'rgba(0, 0, 0, 0.5)',
-    height: '100%',
-    width: '100%',
-    position: 'absolute',
-    top: '0',
-    left: '0',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'column',
-    textAlign: 'center',
+  categoryCartOverlay: {
+    background: "rgba(0, 0, 0, 0.5)",
+    height: "100%",
+    width: "100%",
+    position: "absolute",
+    top: "0",
+    left: "0",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "column",
+    textAlign: "center",
     "& $h5  ": {
-      color: '#fff',
-      marginBottom: '10px',
-    }
-  }
+      color: "#fff",
+      marginBottom: "10px",
+    },
+  },
+  featureProducts: {
+    marginTop: "40px",
+    "& $h4": {
+      color: "#f5841a",
+      fontSize: "60px",
+      marginBottom: "10px",
+      textAlign: "center",
+      textTransform: "uppercase",
+      fontWeight: "bold",
+      "@media (max-width: 1024px)": {
+        fontSize: "40px",
+      },
+    },
+  },
+  featuresButtons: {
+    textAlign: "right",
+    "& @media (max-width: 1024px)": {
+      textAlign: "center !important",
+    },
+  },
 });
