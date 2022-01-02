@@ -7,7 +7,7 @@ export const Search = styled("div")(({ theme }) => ({
   borderRadius: theme.shape.borderRadius,
   display: "flex",
   alignItems: "stretch",
-  width: "100%",
+  // width: "100%",
   justifyContent: "space-between",
   backgroundColor: alpha(theme.palette.common.white, 0.15),
   "&:hover": {
@@ -41,13 +41,13 @@ export const StyledInputBase = styled(InputBase)(({ theme }) => ({
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create("width"),
     color: "#444",
-    width: "100%",
-    [theme.breakpoints.up("md")]: {
-      width: "20ch",
-    },
-    [theme.breakpoints.down("md")]: {
-      width: "20ch",
-    },
+    width: "100% !important",
+    // [theme.breakpoints.up("md")]: {
+    //   width: "20ch",
+    // },
+    // [theme.breakpoints.down("md")]: {
+    //   width: "20ch",
+    // },
   },
 }));
 export const useStyles = makeStyles({
