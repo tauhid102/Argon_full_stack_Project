@@ -1,7 +1,7 @@
 import { InputBase } from "@mui/material";
 import { alpha, styled } from "@mui/material/styles";
 import { makeStyles } from "@mui/styles";
-
+import fashionDress from '../assets/fashion-drees.jpg';
 export const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
@@ -209,5 +209,41 @@ export const useStyles = makeStyles({
       color: '#f5841a !important',
       fontWeight: 300
     },
+  },
+  userCollectionsFormPage:{
+       background : `url(${fashionDress})`,
+        backgroundSize : 'cover',
+        backgroundPosition : 'center',
+        backgroundRepeat : 'no-repeat',
+  },
+  userCollectionsForm:{
+    padding: '1rem'
+  },
+  modalFad:{
+    background: '#fff',
+    border: '4px solid #f5841a !important',
+    position: 'relative',
+  },
+  modalParenMain:{
+    boxShadow: '0px 0px 10px #f5841a !important',
+    background: `rgba(245, 132, 26, 0.625) !important`,
+  },
+  modalCloseButton:{
+    position: 'absolute',
+    top: '10px',
+    right: '10px',
+    background: '#f5841a',
+    color: '#fff',
+    width: '40px',
+    height: '40px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: '20px',
+    borderRadius: '50%',
+    cursor: 'pointer',
+    "&:hover":{
+      background: '#333',
+    }
   }
 });
