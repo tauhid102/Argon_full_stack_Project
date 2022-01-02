@@ -40,18 +40,21 @@ export const pricing = [
 export const categories = [
   {
     id: 1,
-    title: "T-Shirt",
+    title: "Man",
     img: "https://i.ibb.co/bbj4817/Front-of-a-clean-Black-T-Shirt-just-waiting-for-you-to-add-your-own-logo-Graphics-or-words-Clipping.jpg",
+    category : 'man'
   },
   {
     id: 2,
-    title: "Pants",
+    title: "Woman",
     img: "https://i.ibb.co/bbj4817/Front-of-a-clean-Black-T-Shirt-just-waiting-for-you-to-add-your-own-logo-Graphics-or-words-Clipping.jpg",
+    category : 'woman'
   },
   {
     id: 3,
-    title: "Shoes",
+    title: "Children",
     img: "https://i.ibb.co/bbj4817/Front-of-a-clean-Black-T-Shirt-just-waiting-for-you-to-add-your-own-logo-Graphics-or-words-Clipping.jpg",
+    category : 'children'
   },
 ];
 

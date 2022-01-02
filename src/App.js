@@ -1,9 +1,23 @@
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
-import AllProducts from './pages/Products/AllProducts';
+import CategoryResults from './pages/CategoryResult/CategoryResults';
+import Home from './pages/Home/Home';
+
+
+
 function App() {
   return (
     <>
-      <AllProducts/>
+      <Router>
+         <Switch>
+            <Route exact path="/" >
+              <Home/>
+            </Route>
+            <Route path="/products/:category">
+              <CategoryResults/>
+            </Route>
+         </Switch>
+      </Router>
     </>
   );
 }
