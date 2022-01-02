@@ -3,6 +3,7 @@ import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutl
 import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import { Button } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Badge from "@mui/material/Badge";
 import Box from "@mui/material/Box";
@@ -12,10 +13,9 @@ import MenuItem from "@mui/material/MenuItem";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
+import { Link } from "react-router-dom";
 import AppLogo from "../assets/logo.png";
-import {
-  useStyles
-} from "../styles/Styles";
+import { useStyles } from "../styles/Styles";
 // Start Main Function Work___________
 export default function Header() {
   const { headerAppBar, appBarLogo, badgeMenuIcon } = useStyles();
@@ -88,6 +88,14 @@ export default function Header() {
             <MailIcon />
           </Badge>
         </IconButton>
+        <p>Dashboard</p>
+      </MenuItem>
+      <MenuItem>
+        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+          <Badge badgeContent={4} color="error">
+            <MailIcon />
+          </Badge>
+        </IconButton>
         <p>Messages</p>
       </MenuItem>
       <MenuItem>
@@ -131,6 +139,9 @@ export default function Header() {
 
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
+            <Link to="/dashboard">
+              <Button variant="text">Dashboard</Button>
+            </Link>
             <IconButton
               size="large"
               aria-label="show 4 new mails"
