@@ -1,15 +1,19 @@
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
-import React, { useState } from "react";
-import { product } from "../../fakeData/fakeData";
+import React, { useEffect, useState } from "react";
 import { useStyles } from "../../styles/Styles";
-import ShowProduct from "./ShowProduct";
-
+import ShowProduct from "../Home/ShowProduct";
 const ShowProducts = () => {
   const { outlineButton, featuresButtons } = useStyles();
-  const [selectProduct, setSelectProduct] = useState("woman");
-
+  const [selectProduct, setSelectProduct] = useState("Women's clothes");
+  const [products,setProducts]=useState();
+  useEffect(()=>{
+    fetch('http://localhost:5000/products')
+    .then(res=>res.json())
+    .then(data=>setProducts(data));
+  },[]);
+  console.log(products)
   // const filerProducts = product.filter()
-  const filteringProduct = product.filter(
+  const filteringProduct = products?.filter(
     (pro) => pro.category === selectProduct
   );
 
@@ -23,7 +27,7 @@ const ShowProducts = () => {
           <Grid item xs={12} md={6} className={featuresButtons}>
             <Box>
               <Button
-                onClick={() => setSelectProduct("man")}
+                onClick={() => setSelectProduct("Man")}
                 variant="contained"
                 className={outlineButton}
               >
@@ -31,7 +35,7 @@ const ShowProducts = () => {
               </Button>
 
               <Button
-                onClick={() => setSelectProduct("woman")}
+                onClick={() => setSelectProduct("Women's clothes")}
                 sx={{ ml: "8px" }}
                 variant="contained"
                 className={outlineButton}
@@ -40,12 +44,12 @@ const ShowProducts = () => {
               </Button>
 
               <Button
-                onClick={() => setSelectProduct("children")}
+                onClick={() => setSelectProduct("camera")}
                 variant="contained"
                 sx={{ ml: "8px" }}
                 className={outlineButton}
               >
-                Children
+                Camera
               </Button>
             </Box>
           </Grid>
@@ -53,7 +57,7 @@ const ShowProducts = () => {
       </Container>
       <Container  sx={{py: '10px'}}>
         <Grid container spacing={3}>
-          {filteringProduct.map((pro) => (
+          {filteringProduct?.map((pro) => (
             <ShowProduct key={pro._id} product={pro} />
           ))}
         </Grid>
